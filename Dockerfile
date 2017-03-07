@@ -7,6 +7,6 @@ COPY . /opt/app-root/src/
 RUN scl enable rh-ruby22 "bundle install"
 CMD ["scl", "enable", "rh-ruby22", "./run.sh"]
 
-USER root
+USER 997
 RUN chmod og+rw /opt/app-root/src/db
 USER default
